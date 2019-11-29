@@ -20,8 +20,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .img-flex {
@@ -30,6 +28,8 @@ body {
 }
 
 .banner {
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
@@ -46,10 +46,15 @@ h2 {
 
 @media only screen and (min-width: 38em) {
 
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
   .text {
     bottom: 8%;
     right: 4%;
-    width: 60%;
+    max-width: 20em;
     position: absolute;
     background-color: rgba(0, 0, 0, .3);
     border-radius: 10px;
@@ -58,12 +63,19 @@ h2 {
 
 }
 
+@media only screen and (min-width: 60em) {
 
-search:
-  - 'position: relative'
-  - 'position: absolute'
-  - 'background-color: #e2e2e2;'
-  - 'font-family: "Denk One", sans-serif;'
-  - 'font-size: 1.5rem;'
-  - 'background-color: rgba\(0, 0, 0, .3\)'
-  - 'border-radius:'
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+  }
+
+}
